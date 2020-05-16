@@ -11,6 +11,7 @@ import logging
 
 app = Flask(__name__)
 
+
 host = 'http://95.217.218.75:3000/'
 
 @app.route('/')
@@ -82,7 +83,6 @@ def save():
     buff.seek(0)
 
     # Print stats
-    logging.info(f'Completed in {time.time() - start:.2f}s')
 
     # Return data
     return send_file(buff, mimetype='image/png')
